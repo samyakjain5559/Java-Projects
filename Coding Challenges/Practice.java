@@ -23,6 +23,7 @@ public class Practice {
 	    
 	    for(int j = 0; j < 1000; j++) {
 	    	
+	    	// New Game Setup
 	    	int score = 0;
 	    	// 5 dices
 		    int random_int1 = (int)Math.floor(Math.random()*(max-min+1)+min);
@@ -38,7 +39,7 @@ public class Practice {
 		    myNumbers.add(random_int4);
 		    myNumbers.add(random_int5);
 	    	
-	    	
+	    	// Run till game is over
 	    	while(myNumbers.isEmpty() == false) {
 	    		
 		    	if(myNumbers.contains(3)) {
@@ -49,6 +50,7 @@ public class Practice {
 				    	}
 				    }
 			    }
+		    	
 			    // now 3,s are removed
 			    if(myNumbers.contains(3) == false) {
 			    	
@@ -59,6 +61,7 @@ public class Practice {
 			    		myNumbers.add((int)Math.floor(Math.random()*(max-min+1)+min));
 			    	}
 			    	
+			    	// Continue if game over
 			    	if(myNumbers.contains(3) || myNumbers.isEmpty()) {
 			    		continue;
 			    	}
@@ -72,7 +75,6 @@ public class Practice {
 			    		}
 			    	}
 			    	myNumbers.remove(minindex);
-			    	//System.out.println(myNumbers);
 			    	score = score + minimum;
 			    }
 			    
